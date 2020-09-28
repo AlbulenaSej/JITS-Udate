@@ -1,0 +1,234 @@
+@charset "ISO-8859-1";
+
+html{
+	font-size: 62.5%; /* 16px * 62.5 = 10px = 1rem */
+	box-sizing: border-box;	
+}
+
+body{
+	font: 16px Helvetica;
+	height: 100vh; /*Relative to 1% of the height of the viewport*/
+	margin: 0;
+	background-color: black;
+	
+}
+
+h3{
+	color: #ffffff;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	border-top: .2rem #ff5b5b solid;
+	margin : .5rem;
+	height: 3rem; 
+	}
+
+	
+p{
+	text-align: center;
+	font: 16px Helvetica;;
+	color: #ffffff;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	margin : .5rem;
+	height: 13rem; 
+	border-bottom: .2rem #ff5b5b solid;
+}
+
+.grid-container{
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"main"
+	"footer";
+	grid-template-columns: 1fr; /*fr = fragment */
+	gird-tamplate-rows: 5rem 1fr 5rem; /* for header, main and footer*/
+	height: 100%;
+}
+
+.header{
+	grid-area: header;
+	background-color: black; 
+	color: #ffffff;
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	padding: 1rem; /*ODER 0.5???*/
+}
+.brand a{
+	color: #ff5b5b;
+	font-size: 3rem;
+	font-weight: bold;
+	text-decoration: none; 
+}
+.logo-image{
+	max-width: 15rem;
+	max-height:15rem;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.header-links a{
+	color: #ff5b5b; 
+	text-decoration: none; 
+	padding: 1rem; 
+}
+
+.header-links a:hover{
+	color: white; 
+	
+}
+
+.main{
+	grid-area:main;
+	
+}
+
+.footer{
+	grid-area:footer;
+	background-color: black;
+	color: #ff5b5b;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+}
+a {
+	text-decoration: none; 
+	color: white;; 
+}
+a:hover{
+	color: #ff5b5b;
+}
+
+/* Startseite*/
+.produkte{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap:wrap;
+}
+
+.produkte li {
+	list-style-type: none;
+	padding: 0; 
+	flex: 0 1 50rem; /*flex-grow, shrink, width */
+	margin : 1rem;
+	height: 42rem; 
+	border-bottom: .1rem #ff5b5b solid;
+}
+.produkt{
+	display: flex;
+	flex-direction: column;
+	justify-content: front; /*space-between*/
+	height:100%;
+}
+.produkt-name{
+	font-size: 2rem; 
+	font-weight: bold;
+	color: #ff5b5b;
+}
+.produkt-name a:hover{
+	color: #ff5b5b; 
+}
+
+.produkt-marke{
+	font-size: 1.2rem;
+	color: #808080;
+}
+
+.produkt-preis{
+	font-size: 1.9rem; 
+	font-weight: bold;
+	margin-bottom: 1rem;
+	color: #ff5b5b;
+}
+.produkt-image{
+	max-width: 34rem;
+	max-height: 34rem;
+	display: flex;
+	justify-content: center;
+	
+}
+
+/*Seitenliste*/
+
+.brand button{
+	font-size: 3rem;
+	padding: .5rem;
+	background: none;
+	border: none;
+	color: #ff5b5b;
+	cursor: pointer; 
+}
+
+.seitenliste{
+	position: fixed;
+	transition: all .5se;
+	transform: translate(-15rem); /*um die seitenliste außerhalb der Bildschirms zu halten*/
+	width: 15rem;
+	background-color: black; 
+	height: 100%;
+	
+}
+
+.seitenliste.open{
+	transform: translateX(0);/*beim öffnen der seitenleiste wird auf oben referiert*/
+}
+
+.seitenliste-schließen-button{
+	border-radus: 30%;
+	border: 0.1rem black solid;
+	width:3rem;
+	height:3rem;
+	padding: .5rem;
+	padding-top:0;
+	font-size: 2rem;
+	cursor: pointer;
+	position: absolute;
+	right: 0rem; 
+	top: 0rem;		
+}
+.Anfangdiv {
+	display: flex;
+	justify-content: center; 
+	align-items: center;		
+}
+
+.background1 {
+	background-color: black;
+	border-radius: 10px;
+	margin: 10%;
+	margin-top: 120px;
+}
+
+.textbox {
+	width: 100%;
+	overflow: hidden;
+	font-size: 20px;
+	padding: 8px 0;
+	margin: 8px 0;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+}
+
+.textbox i {
+	width: 26px;
+	float: left;
+	text-align: center;
+	
+}
+
+.neu {
+	width: 100%;
+	background: none;
+	border: 2px solid #ff5b5b;
+	color: white;
+	padding: 5px;
+	font-size: 18px;
+	cursor: pointer;
+	margin: 12px 0;
+}
